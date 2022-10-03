@@ -2,10 +2,11 @@
 //reunir todas as rotas da
 //minha aplicação
 const { Router } = require('express');
-const userRouter = require('./users.routes.js');
-
+const usersRouter = require('./users.routes.js');
+const notesRouter = require('./notes.routes');
 const routes = Router();
 
-routes.use('/users', userRouter);
+routes.use('/users', usersRouter);
+routes.use('/notes', notesRouter);
 
 module.exports = routes;
